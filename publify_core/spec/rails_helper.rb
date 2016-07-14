@@ -63,8 +63,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   # Test helpers needed for Devise
-  config.include Devise::TestHelpers, type: :controller
-  config.include Devise::TestHelpers, type: :view
+  config.include Devise::Test::ControllerHelpers, type: :controller
 end
 
 def file_upload(filename, file = 'testfile.txt')
